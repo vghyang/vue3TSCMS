@@ -1,40 +1,29 @@
 {
   "compilerOptions": {
+    //目标代码ts->js(es5,6,7..)
     "target": "esnext",
+    //目标代码使用后模块化的方案(commonjs ..)
     "module": "esnext",
     "strict": true,
     "jsx": "preserve",
+    //按照node的方式解析模版
     "moduleResolution": "node",
+    //跳过一些库的类型检测
     "skipLibCheck": true,
+    //es module和commonjs能否混合使用
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "useDefineForClassFields": true,
     "sourceMap": true,
     "baseUrl": ".",
-    "types": [
-      "webpack-env"
-    ],
+    "types": ["webpack-env"],
     "paths": {
-      "@/*": [
-        "src/*"
-      ]
+      "@/*": ["src/*"]
     },
-    "lib": [
-      "esnext",
-      "dom",
-      "dom.iterable",
-      "scripthost"
-    ]
+    //指定可以在项目中使用那些库的类型
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "tests/**/*.ts",
-    "tests/**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "tests/**/*.ts", "tests/**/*.tsx"],
+  "exclude": ["node_modules"]
 }
